@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "workspace compass",
+  "version": "0.1.0",
+  "description": "smart tab workspaces, command search, semantic grouping, and session restore for research-heavy browsing.",
+  "permissions": ["tabs", "storage", "sessions"],
+  "chrome_url_overrides": {
+    "newtab": "start.html"
+  },
+  "action": {
+    "default_title": "workspace compass"
+  },
+  "background": {
+    "service_worker": "scripts/00_service_worker.js"
+  },
+  "commands": {
+    "open-workspace-compass": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K"
+      },
+      "description": "open workspace compass"
+    }
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "workspace-compass@renayang.local",
+      "strict_min_version": "109.0"
+    }
+  }
+}

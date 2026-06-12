@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Workspace Compass</title>
+    <link rel="stylesheet" href="styles/workbench.css" />
+  </head>
+
+  <body>
+    <main class="shell" aria-label="Workspace Compass">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Workspace Compass</p>
+          <h1>Keep work in context.</h1>
+          <p class="subtitle">Group tabs into projects, save working sessions, and find anything instantly.</p>
+        </div>
+        <button id="openCommand" class="primary" type="button">Command Palette <kbd>⌘/ctrl</kbd><kbd>k</kbd></button>
+      </section>
+
+      <section class="toolbar" aria-label="workspace controls">
+        <label class="searchbox">
+          <span>search</span>
+          <input id="tabSearch" type="search" placeholder="title, url, group, or window" autocomplete="off" />
+        </label>
+        <select id="viewMode" aria-label="grouping mode">
+          <option value="smart">Smart Workspace</option>
+          <option value="window">Browser Window</option>
+          <option value="task">Task Type</option>
+          <option value="session">Saved Session</option>
+        </select>
+        <button id="snapshotNow" type="button">Save Current Session</button>
+        <button id="refreshTabs" type="button">Refresh</button>
+      </section>
+
+      <section id="summaryStrip" class="summary-strip" aria-live="polite"></section>
+      <section id="groupBoard" class="group-board" aria-label="tab groups"></section>
+
+      <aside id="commandOverlay" class="command-overlay hidden" aria-hidden="true">
+        <div class="command-card" role="dialog" aria-modal="true" aria-label="Command Palette">
+          <input id="commandInput" type="search" placeholder="Type a command or tab name..." autocomplete="off" />
+          <div id="commandResults" class="command-results"></div>
+        </div>
+      </aside>
+
+      <template id="groupTemplate">
+        <article class="group-card" draggable="true">
+          <header class="group-header">
+            <div>
+              <h2></h2>
+              <p></p>
+            </div>
+            <div class="group-actions"></div>
+          </header>
+          <ol class="tab-list"></ol>
+        </article>
+      </template>
+    </main>
+
+    <script src="scripts/01_browser_gate.js"></script>
+    <script src="scripts/02_safe_dom.js"></script>
+    <script src="scripts/03_storage_hub.js"></script>
+    <script src="scripts/04_tab_reader.js"></script>
+    <script src="scripts/05_group_engine.js"></script>
+    <script src="scripts/06_session_vault.js"></script>
+    <script src="scripts/07_command_center.js"></script>
+    <script src="scripts/08_workspace_ui.js"></script>
+  </body>
+</html>
