@@ -10,9 +10,6 @@ Most knowledge work is organized as projects.
 
 *Workspace Compass* sits between those two ideas.
 
-
----
-
 ## Why It Exists
 
 Modern browsers are good at opening tabs and bad at preserving context.
@@ -21,7 +18,6 @@ A research project usually involve journal articles, datasets, GitHub repositori
 
 *Workspace Compass* tries to reconstruct that project context using local rules, semantic hints, and workspace-level organization.
 
----
 ## Current Approach
 
 *Workspace Compass* combines three grouping layers.
@@ -73,8 +69,6 @@ When detected, these become first-class workspace groups.
 
 A repository is often a better grouping unit than a generic "Code" label.
 
----
-
 ## Current Features
 
 - project-aware grouping
@@ -91,8 +85,6 @@ A repository is often a better grouping unit than a generic "Code" label.
 - safe DOM rendering
 - Firefox, Chrome, and Edge support
 
----
-
 ## Security
 
 *Workspace Compass* does not use `innerHTML` for tab content rendering.
@@ -102,8 +94,6 @@ User-controlled page titles are rendered using explicit DOM nodes and `textConte
 The extension does not send browsing data to external services.
 
 Semantic grouping is performed locally.
-
----
 
 ## Project Layout
 
